@@ -1,0 +1,31 @@
+{
+    "jest": {
+        "verbose": true,
+        "clearMocks": true,
+        "coverageDirectory": "coverage_jest",
+        "coveragePathIgnorePatterns": [
+          "/node_modules/"
+        ],
+        "moduleFileExtensions": [
+          "js",
+          "jsx",
+          "json"
+        ],
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        },
+        "moduleNameMapper": {
+            "\\.(css|scss)$": "identity-obj-proxy",
+            "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/tools/fileMock.js"
+        },
+        "setupFiles": [
+          "<rootDir>config/jest/config.js"
+        ],
+        "setupFilesAfterEnv": [
+          "./config/jest/setup.js"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/"
+        ]
+    }
+}
